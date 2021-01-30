@@ -1,0 +1,333 @@
+<ion-header>
+  <ion-toolbar>
+<ion-title>
+ DatenErfassung-Barcode
+</ion-title>
+<ion-buttons slot="start">
+  <ion-back-button defaultHref="/startseite"></ion-back-button>
+</ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+  <ion-list  class="scroll">
+  <ion-item>
+    <ion-label class="my-label">Barcodscanner </ion-label>
+  </ion-item>
+  <ion-row>
+  <ion-col>
+    <ion-item>
+
+  <ion-input  type ="text" [(ngModel)]="barcodeScannen" disabled="{{barNr_isDisabled}}" (input)='barNrChanged($event.target.value)' class="my-label" placeholder="Barcodenummer" ></ion-input>
+
+    </ion-item>
+  </ion-col>
+  <ion-col>
+    <ion-item >
+      <ion-input type ="text" [(ngModel)]="barcodeScannen" disabled="{{alterNr_isDisabled}}" (input)='alterNrChanged($event.target.value)'   class="my-label" placeholder="Alternative Nummer"> </ion-input>
+    </ion-item>
+  </ion-col>
+  </ion-row>
+
+
+
+
+
+
+
+
+
+<ion-radio-group [(ngModel)]="pruefungsort">
+  <ion-item>
+    <ion-label class="my-label">
+      
+      Pruefungsort
+     </ion-label>
+  </ion-item>
+  <ion-row>
+  <ion-col>
+    <ion-item>
+      <ion-label class="my-label">
+        
+        Verwaltung</ion-label>
+      <ion-radio value="verwaltung"> </ion-radio>
+    </ion-item>
+  </ion-col>
+  <ion-col>
+    <ion-item>
+      <ion-label class="my-label">Werk / Produktion </ion-label>
+
+      <ion-radio value= "Werk / Produktion">  </ion-radio>
+     
+    </ion-item>
+  </ion-col>
+  </ion-row>
+</ion-radio-group>
+
+
+
+
+
+  <ion-radio-group [(ngModel)]="pruefung">
+  <ion-item>
+    <ion-label class="my-label">Erstepruefung oder Wiederholungspruefung </ion-label>
+  </ion-item>
+<ion-row>
+  <ion-col>
+    <ion-item>
+      <ion-label class="my-label">Erste</ion-label>
+      <ion-radio value="Erstepruefung"></ion-radio>
+    </ion-item>
+  </ion-col>
+  <ion-col>
+    <ion-item>
+      <ion-label class="my-label">Wiederholung</ion-label>
+      <ion-radio  value="Wiederholungspruefung" ></ion-radio>
+    </ion-item>
+  </ion-col>
+</ion-row>
+</ion-radio-group>
+
+
+
+
+<ion-radio-group [(ngModel)]="sichtpruefung">
+<ion-item>
+  <ion-label class="my-label">Sichtpruefung </ion-label>
+</ion-item>
+<ion-row>
+<ion-col>
+  <ion-item>
+    <ion-label class="my-label">Bestanden</ion-label>
+    <ion-radio value="Bestanden" ></ion-radio>
+  </ion-item>
+</ion-col>
+<ion-col>
+  <ion-item>
+    <ion-label class="my-label">Nicht Bestanden</ion-label>
+    <ion-radio value="Nicht Bestanden"></ion-radio>
+  </ion-item>
+</ion-col>
+</ion-row>
+</ion-radio-group>
+
+
+
+
+
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-label class="my-label">Geraetart</ion-label>
+      </ion-item>
+    </ion-col>
+
+    <ion-col>
+      <ion-item>
+    
+        <ion-select [(ngModel)]="geraeteArt">
+          <ion-select-option selected value="brown1">Arown1</ion-select-option>
+          <ion-select-option value="brown2">Brown2</ion-select-option>
+          <ion-select-option value="brown3">Crown3</ion-select-option>
+        </ion-select>
+          
+      </ion-item>
+      </ion-col>
+    </ion-row>
+
+
+
+
+<ion-radio-group [(ngModel)]="schutzklasse">
+<ion-item>
+  <ion-label class="my-label">Schutzklasse </ion-label>
+</ion-item>
+<ion-row>
+<ion-col>
+  <ion-item>
+    <ion-label class="my-label">SK1</ion-label>
+    <ion-radio value="SK1" ></ion-radio>
+  </ion-item>
+</ion-col>
+<ion-col>
+  <ion-item>
+    <ion-label class="my-label">SK2</ion-label>
+    <ion-radio value="SK2" ></ion-radio>
+  </ion-item>
+</ion-col>
+<ion-col>
+  <ion-item>
+    <ion-label class="my-label">SK3</ion-label>
+    <ion-radio value="SK3"></ion-radio>
+  </ion-item>
+</ion-col>
+</ion-row>
+</ion-radio-group>
+
+
+
+
+<ion-radio-group  [(ngModel)]="heizkoerperVorhanden">
+<ion-item>
+  <ion-label class="my-label">Heizkoerper Vorhanden </ion-label>
+</ion-item>
+
+<ion-row>
+<ion-col>
+  <ion-item>
+    <ion-label class="my-label">Ja</ion-label>
+    <ion-radio value="Ja" ></ion-radio>
+  </ion-item>
+</ion-col>
+
+<ion-col>
+  <ion-item>
+    <ion-label class="my-label">Nein</ion-label>
+    <ion-radio value="Nein"></ion-radio>
+  </ion-item>
+</ion-col>
+</ion-row>
+</ion-radio-group>
+
+
+
+
+
+<ion-radio-group [(ngModel)]="metall">
+<ion-item>
+  <ion-label class="my-label">Berühbares Metall am PE </ion-label>
+</ion-item>
+
+<ion-row>
+<ion-col>
+  <ion-item>
+    <ion-label class="my-label">Ja</ion-label>
+    <ion-radio value="ja" ></ion-radio>
+  </ion-item>
+</ion-col>
+
+<ion-col>
+  <ion-item>
+    <ion-label class="my-label">Nein</ion-label>
+    <ion-radio value="Nein"></ion-radio>
+  </ion-item>
+</ion-col>
+</ion-row>
+</ion-radio-group>
+
+
+
+
+
+
+<ion-radio-group [(ngModel)]="selv">
+<ion-item>
+  <ion-label class="my-label">SELV / PELV </ion-label>
+</ion-item>
+
+<ion-row>
+<ion-col>
+  <ion-item>
+    <ion-label class="my-label">Ja</ion-label>
+    <ion-radio value="ja3" ></ion-radio>
+  </ion-item>
+</ion-col>
+
+<ion-col>
+  <ion-item>
+    <ion-label class="my-label">Nein</ion-label>
+    <ion-radio value="nein3"></ion-radio>
+  </ion-item>
+</ion-col>
+</ion-row>
+</ion-radio-group>
+
+
+
+
+
+<ion-radio-group [(ngModel)]="funktionsPruefung">
+<ion-item>
+  <ion-label class="my-label">Funktionspruefung </ion-label>
+</ion-item>
+
+<ion-row>
+<ion-col>
+  <ion-item>
+    <ion-label class="my-label">Ja</ion-label>
+    <ion-radio value="ja4" ></ion-radio>
+  </ion-item>
+</ion-col>
+
+<ion-col>
+  <ion-item>
+    <ion-label class="my-label">Nein</ion-label>
+    <ion-radio value="nein4"></ion-radio>
+  </ion-item>
+</ion-col>
+</ion-row>
+</ion-radio-group>
+
+
+
+
+
+
+
+  <ion-item>
+    <ion-label class="my-label">Raumnummer </ion-label>
+  </ion-item>
+  <ion-row>
+  <ion-col>
+    <ion-item>
+  <ion-input [(ngModel)]="raumnummer" type ="text" placeholder="Raumnummer"></ion-input>
+    </ion-item>
+  </ion-col>
+
+  </ion-row>
+
+
+
+
+
+<ion-radio-group >
+<ion-item>
+  <ion-label class="my-label">Projekt </ion-label>
+</ion-item>
+<ion-row>
+<ion-col>
+  <ion-item>
+<ion-input  [(ngModel)]="prjktNummer" type ="text" disabled="{{prjktNr_isDisabled}}" (input)='prjktNrChanged($event.target.value)' placeholder="Projektnummer"></ion-input>
+  </ion-item>
+</ion-col>
+<ion-col>
+  <ion-item>
+    <ion-input [(ngModel)]="kdNummer" type ="text" disabled="{{kdNr_isDisabled}}" (input)='kdNrChanged($event.target.value)'   placeholder="Kundennummer"> </ion-input>
+  </ion-item>
+</ion-col>
+</ion-row>
+</ion-radio-group>
+
+
+
+
+<ion-label class="my-label">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kommentar</ion-label>
+<ion-item>
+  <ion-textarea class="kommentar" [(ngModel)]="kommentar"></ion-textarea>
+</ion-item>
+
+
+  <ion-col>
+  
+    <ion-item class ="ion-padding">
+     
+<input type="file"  (change)="selectedFile($event)">
+
+    </ion-item>
+    <button  (click)="sendData()">Senden</button>
+    
+  </ion-col>
+
+
+    <ion-col><ion-button color="warning" (click)="takePicture()">Take Picture</ion-button></ion-col>
+
+</ion-list>

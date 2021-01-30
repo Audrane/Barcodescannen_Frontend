@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Startseite</ion-title>
+  </ion-toolbar>
+
+</ion-header>
+  <ion-content id="contenaire">
+    <ion-grid [fixed]="true">
+      <ion-row>
+        <ion-col>
+          <div style="display: block;">
+            <!-- Advanced: explicity set the icon for each platform -->
+         <!--   <ion-icon style="display: block;" name="barcode" style="background-color: rgb(236, 236, 147);"class="cell-class" (click)="loginSeite('barcodscannen')"></ion-icon>-->
+            
+         <img src="assets/imges/barcode39jpu.png" (click)="loginSeite('barcodscannen')">
+         <ion-label style="display: block;">Barcode Scanner</ion-label>
+
+            
+          </div>
+        </ion-col>
+
+        <ion-col>
+          <div>        
+  <!--Basic: auto-select the icon based on the platform -->
+  <!-- Advanced: explicity set the icon for each platform -->
+  <!--<ion-icon ios="logo-angular" style="background-color:rgb(231, 76, 76);" md="logo-angular" class="cell-class"  (click)="loginSeite('datenerfassen')"  ></ion-icon>-->
+ 
+
+
+  <img src="assets/imges/prüfung.png" class="cell-class" (click)="loginSeite('datenerfassen')">
+  <ion-label>Prüfen 0701-0702</ion-label>
+          </div>
+        </ion-col>
+      </ion-row>
+
+
+
+
+
+
+
+      <ion-row>
+        <ion-col>
+          <div>
+               <!--Basic: auto-select the icon based on the platform -->
+   <!-- Advanced: explicity set the icon for each platform -->
+ <!--   <ion-icon name="people" class="cell-class" style="background-color:red;"  (click)="loginSeite('kunde')"></ion-icon>-->
+   <img src="assets/imges/projektnek3i.png" class="cell-class" (click)="loginSeite('kunde')">
+   <ion-label>Projekt</ion-label>
+          </div>
+        </ion-col>
+        <ion-col>
+          <div>            
+     <!--Basic: auto-select the icon based on the platform -->
+ 
+
+  <!-- Advanced: explicity set the icon for each platform -->
+  <!-- <ion-icon name="calendar-sharp" class="cell-class" style="background-color: yellow;" (click)="loginSeite('Kalendar  ')"></ion-icon>-->
+  <img src="assets/imges/termin9kkz3.png" class="cell-class" (click)="loginSeite('Kalendar')">
+  <ion-label>Kalendar</ion-label>
+          </div>
+        </ion-col>
+        </ion-row>
+        </ion-grid>
+        </ion-content>
+
+  <!--Basic: auto-select the icon based on the platform -->
+

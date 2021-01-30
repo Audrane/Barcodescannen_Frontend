@@ -1,0 +1,96 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Registrieren</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/startseite"></ion-back-button>
+      </ion-buttons>
+      <ion-title>Register</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <form [formGroup] = "signUpFormGroup" (ngSubmit) = "Signupdata()">
+    
+      <ion-item lines="full">
+        <ion-label position="floating">Firmenname</ion-label>
+        <ion-input type="text" formControlName = "firmenName"></ion-input>
+      </ion-item>
+         
+    
+
+      
+        <ion-card>
+          <ion-item lines="full">
+            <ion-label position="floating">Password</ion-label>
+            <ion-input formControlName = "passwort" type="password" ></ion-input>
+          </ion-item>
+        </ion-card>
+     
+   
+<ion-card>
+
+
+      <ion-item lines="full">
+        <ion-label position="floating">Name Prüfer</ion-label>
+        <ion-input formControlName = "namePruefer"></ion-input>
+      </ion-item>
+    </ion-card>
+  <ion-card>
+
+ 
+      <ion-item lines="full">
+        <ion-label position="floating">straße</ion-label>
+        <ion-input formControlName = "strasse"></ion-input>
+      </ion-item>
+    </ion-card>
+  <ion-card>
+      <ion-item lines="full">
+        <ion-label position="floating">Postleitzahl</ion-label>
+        <ion-input formControlName = "postleitzahl"></ion-input>
+      </ion-item>
+   </ion-card>
+  <ion-card>
+      <ion-item lines="full">
+        <ion-label position="floating">Telefon</ion-label>
+        <ion-input  formControlName = "telefon"></ion-input>
+      </ion-item>
+    </ion-card>
+
+  <ion-card>
+  
+      <ion-item lines="full">
+        <ion-label position="floating">Telefax</ion-label>
+        <ion-input  formControlName = "telefax"></ion-input>
+      </ion-item>
+    </ion-card>
+  <ion-card>
+      <ion-item lines="full">
+        <ion-label position="floating">Email</ion-label>
+        <ion-input  formControlName = "email"></ion-input>
+      </ion-item>
+    </ion-card>
+  <ion-card>
+      
+      <ion-item lines="full">
+        <ion-label position="floating">Hersteller Von Messgerät</ion-label>
+        <ion-input type="text"  formControlName = "herstelleVonMessgeraet"></ion-input>
+      </ion-item>
+    </ion-card>
+  <ion-card>
+      <ion-item lines="full">
+        <ion-label position="floating">Messgerät Typ</ion-label>
+        <ion-input  formControlName = "messgeraetTyp"></ion-input>
+      </ion-item>
+    </ion-card>
+    
+          <ion-button type="submit" color="danger" expand="block" color="warning">Registrieren</ion-button>
+
+    </form>
+  </ion-content>
+</ion-content>

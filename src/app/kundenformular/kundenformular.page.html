@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>kundenformular</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/startseite"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+  <form [formGroup] = "kundeFormGroup" (ngSubmit) = "submit()">
+    <ion-item>
+      <ion-label position="floating">Firmenname</ion-label>
+      <ion-input  type="text" name="Firmenname" required formControlName="firmenname"></ion-input>
+    </ion-item>
+   
+  
+    <ion-item>
+      <ion-label position="floating">Straße</ion-label>
+      <ion-input  type="text" name="Straße" required formControlName="strasse"></ion-input>
+    </ion-item>
+    
+
+    <ion-item>
+      <ion-label position="floating">Postleitzahl</ion-label>
+      <ion-input  type="text" name="Postleitzahl" required formControlName="postleitzahl"></ion-input>
+    </ion-item>
+
+  
+
+    <ion-item>
+      <ion-label position="floating">Projektnummer</ion-label>
+      <ion-input  type="text" name="Projektnummer"  required formControlName="projektnummer"></ion-input>
+    </ion-item> 
+   
+  
+    <ion-button type="submit" color="danger" expand="full" color="primary" >Submit</ion-button>
+  </form>
+</ion-content>

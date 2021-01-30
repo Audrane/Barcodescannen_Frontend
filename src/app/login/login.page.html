@@ -1,0 +1,75 @@
+
+
+<ion-header>
+  <ion-toolbar>
+<ion-title>
+Anmeldung
+</ion-title>
+<ion-buttons slot="start">
+  <ion-back-button defaultHref="/startseite" (click) = "DismissClickbackButton();"></ion-back-button>
+</ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-grid>
+
+	<ion-row justify-content-center>
+		<ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+			<div text-center>
+				<h4 style="text-align: center; color:black;  font-style: italic;">DGUV-V3</h4>
+      </div>
+      
+			<div class="form-group" [class.has-error]="usernameControl.invalid && usernameControl.touched  || passwortControl.invalid && passwortControl.touched">
+				<ion-item>
+          <ion-icon name="person"></ion-icon>
+          <ion-input [(ngModel)]="username" type="text"  placeholder="Username" required #usernameControl="ngModel"></ion-input>
+          
+				</ion-item>
+        <span *ngIf ="usernameControl.invalid  && usernameControl.touched" style="color: red;">
+         Bitte Username eingeben 
+                    </span>
+
+        
+
+				<ion-item>
+      <ion-icon name="key"></ion-icon> 
+					<ion-input [(ngModel)]="password" type="password" placeholder="Password" required  #passwortControl="ngModel"></ion-input>
+        </ion-item>
+        
+        <span *ngIf ="passwortControl.invalid  && passwortControl.touched" style="color: red;">
+         Bitte password eingeben
+                    </span>
+      </div>
+      <div padding>
+        <ion-button size="large" color="warning" expand="block" (click)="LoginData();"> Anmelden</ion-button>
+        
+      </div>
+  
+      <ion-item>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <ion-checkbox checked="true"></ion-checkbox> 
+            </ion-col>
+            <ion-col>
+              <label>Passwort Speichern</label>
+            </ion-col>
+            <ion-col>
+              &nbsp;&nbsp;&nbsp;
+              <a routerLink="/passwort-vergessen" (click) = "DismissclickPasswortVergessen()"> Passwort vergessen </a>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+   
+          
+            <a routerLink="/registrieren"  (click) = "DismissclickRegistrieren();" > Jetzt registrieren </a>
+  <br>
+          
+  
+      </ion-col>
+  
+    </ion-row>
+    
+  </ion-grid>

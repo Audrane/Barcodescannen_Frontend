@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Passwort zurücksetzen</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form>
+    <ion-item lines="full">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="email" required></ion-input>
+    </ion-item>
+
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="danger" expand="block" (click) ="Dismissclick()">Senden</ion-button>
+      </ion-col>
+    </ion-row>
+
+    <small>
+      Bitte geben Sie den Benutzernamen oder die E-Mail-Adresse an, die Sie bei der Anmeldung verwendet haben.
+ 
+    </small>
+  </form>
+</ion-content>

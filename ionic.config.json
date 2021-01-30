@@ -1,0 +1,14 @@
+{
+  "name": "DGUV-V3",
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
+  "type": "angular",
+  "proxies": [
+    {
+      "path": "/",
+      "proxyUrl": "http://localhost/dguv-v3-api"
+    }
+  ]
+}

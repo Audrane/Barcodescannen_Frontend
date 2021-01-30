@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Kunde</ion-title>
+    
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/startseite"></ion-back-button>
+      </ion-buttons>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-button (click)="formularAbfrage()">
+    Kundenanlegen
+  </ion-button>
+<div style="background-color: salmon; border-radius: 25px 25px;" class="circle">
+ <label>  {{data}}
+  
+ </label> 
+</div>
+
+
+</ion-content>
